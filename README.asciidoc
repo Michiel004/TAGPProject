@@ -1,8 +1,9 @@
 = TAGP DigitalTwin Webserver
 
-
+This project implements a Digital Twin of a led circuit and a solar panel.  
 ----
-
+Started from:
+https://github.com/ValckenaersPaul/TAGP
 ----
 
 
