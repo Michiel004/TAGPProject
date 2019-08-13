@@ -1,0 +1,3 @@
+-name solar_station@192.168.0.104
+-setcookie webserver_erlang_cowboy
+-heart
