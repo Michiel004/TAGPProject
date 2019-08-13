@@ -1,0 +1,6 @@
+C:\Users\michi\Desktop\I2C\I2C slave.cydsn\I2C slave.cyprj|8e8857c7-0ef3-4843-8b60-a85c591ca98d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a3780674-154e-4e67-b768-89fb0010bb65
+C:\Users\michi\OneDrive\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|f92d4435-c1b4-4323-ab4b-bfbf32dfe5b8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b0ee2e2e-42a4-44ee-b0ef-7af1c093ebf8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|4ed2317d-9e86-4e28-8dfa-504f4f5f019d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e3f9a85f-29f9-4e2e-97d1-b9f2b68489af

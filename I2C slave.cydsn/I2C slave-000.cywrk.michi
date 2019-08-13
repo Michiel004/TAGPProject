@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="I2C slave-000\I2C slave\TopDesign">
+<ExpandedNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\TopDesign</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Pins</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Analog</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\DMA</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Clocks</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Interrupts</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\System</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Directives</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Flash Security</v>
+<v>I2C slave-000\I2C slave\Header Files</v>
+<v>I2C slave-000\I2C slave\Header Files\cyapicallbacks.h</v>
+<v>I2C slave-000\I2C slave\Source Files</v>
+<v>I2C slave-000\I2C slave\Source Files\main.c</v>
+<v>I2C slave-000\I2C slave\Generated_Source</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\TopDesign</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Pins</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Analog</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\DMA</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Clocks</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Interrupts</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\System</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Directives</v>
+<v>I2C slave-000\I2C slave\I2C slave.cydwr\Flash Security</v>
+<v>I2C slave-000\I2C slave\Header Files</v>
+<v>I2C slave-000\I2C slave\Header Files\cyapicallbacks.h</v>
+<v>I2C slave-000\I2C slave\Source Files</v>
+<v>I2C slave-000\I2C slave\Source Files\main.c</v>
+<v>I2C slave-000\I2C slave\Generated_Source</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\ADC_SAR_Seq_1</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cy_boot</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cy_dmac</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cy_lfclk</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\EZI2C</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\EZI2C_SCB_IRQ</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\EZI2C_SCBCLK</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\EZI2C_scl</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\EZI2C_sda</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\Pin_1</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\Pin_2</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\Pin_3</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>I2C slave-000\I2C slave\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\TopDesign</v>
+<v>I2C slave-000\I2C slave\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\TopDesign</v>
+<v>I2C slave-000\I2C slave\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\CortexM0</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_INT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_intClock.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_IRQ.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_BOOT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_BOOT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_INT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCB_IRQ.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCBCLK.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\I2C slave.elf</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\I2C slave.hex</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\I2C slave.map</v>
+<v>I2C slave-000\I2C slave\I2C slave.gpdsc</v>
+<v>I2C slave-000\I2C slave\I2C slave.rpt</v>
+<v>I2C slave-000\I2C slave\I2C slave_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\CortexM0</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_INT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_intClock.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_IRQ.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_SAR_Seq_1_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_BOOT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_BOOT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_EZI2C_INT.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCB_IRQ.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_SCBCLK.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_scl_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\EZI2C_sda_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1_PM.lst</v>
+<v>I2C slave-000\I2C slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\PSoC 4 Architecture TRM</v>
+<v>I2C slave-000\I2C slave\PSoC 4200M Family Datasheet</v>
+<v>I2C slave-000\I2C slave\System Reference Guides</v>
+<v>I2C slave-000\I2C slave\System Reference Guides\cy_boot_v5_80</v>
+<v>I2C slave-000\I2C slave\System Reference Guides\cy_dmac_v1_10</v>
+<v>I2C slave-000\I2C slave\System Reference Guides\cy_lfclk_v1_20</v>
+<v>I2C slave-000\I2C slave\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>I2C slave-000\I2C slave\cy_pins_v2_20</v>
+<v>I2C slave-000\I2C slave\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>I2C slave-000\I2C slave\SCB_P4_v4_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>I2C slave-000</v>
+<v>I2C slave-000\I2C slave</v>
+<v>I2C slave-000\I2C slave\PSoC 4 Architecture TRM</v>
+<v>I2C slave-000\I2C slave\PSoC 4200M Family Datasheet</v>
+<v>I2C slave-000\I2C slave\System Reference Guides</v>
+<v>I2C slave-000\I2C slave\System Reference Guides\cy_boot_v5_80</v>
+<v>I2C slave-000\I2C slave\System Reference Guides\cy_dmac_v1_10</v>
+<v>I2C slave-000\I2C slave\System Reference Guides\cy_lfclk_v1_20</v>
+<v>I2C slave-000\I2C slave\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>I2C slave-000\I2C slave\cy_pins_v2_20</v>
+<v>I2C slave-000\I2C slave\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>I2C slave-000\I2C slave\SCB_P4_v4_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\main.c" />
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\I2C slave.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="775, 543" SelectedTabbedMdiWindow="3a706752-6bb1-4f03-9e71-3e3dfe46405c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="ba9bf17d-184e-4fac-84d5-2f949e74a913" /><DocumentWindow Key="C:\Users\michi\Desktop\I2C\I2C slave.cydsn\main.c" Guid="5dba4e4c-84ff-4c54-a4f6-231cdd598a7f" /><DocumentWindow Key="C:\Users\michi\Desktop\I2C\I2C slave.cydsn\TopDesign\TopDesign.cysch" Guid="3a706752-6bb1-4f03-9e71-3e3dfe46405c" /><DocumentWindow Key="C:\Users\michi\Desktop\I2C\I2C slave.cydsn\I2C slave.cydwr" Guid="57c3c138-8505-4113-932e-b4a76ec64dbf" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

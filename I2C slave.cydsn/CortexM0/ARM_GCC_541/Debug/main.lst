@@ -1,0 +1,768 @@
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB34:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 82B0     		sub	sp, sp, #8
+  37              		.cfi_def_cfa_offset 16
+  16:main.c        ****    
+  17:main.c        ****     uint8 i2cbuf[3];
+  18:main.c        ****     i2cbuf[0] = 7;
+  38              		.loc 1 18 0
+  39 0004 01AA     		add	r2, sp, #4
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 2
+
+
+  40 0006 0723     		movs	r3, #7
+  41 0008 1370     		strb	r3, [r2]
+  19:main.c        ****     i2cbuf[1] = 8;
+  42              		.loc 1 19 0
+  43 000a 0133     		adds	r3, r3, #1
+  44 000c 5370     		strb	r3, [r2, #1]
+  20:main.c        ****     i2cbuf[2] = 9;
+  45              		.loc 1 20 0
+  46 000e 0133     		adds	r3, r3, #1
+  47 0010 9370     		strb	r3, [r2, #2]
+  48              	.LVL0:
+  21:main.c        ****     
+  22:main.c        ****     int16 result = 0;
+  23:main.c        ****    // CyGlobalIntEnable; /* Enable global interrupts. */
+  24:main.c        **** 
+  25:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  26:main.c        ****     
+  27:main.c        ****    
+  28:main.c        **** 
+  29:main.c        ****     
+  30:main.c        ****     EZI2C_EzI2CSetBuffer1(3,0,i2cbuf);
+  49              		.loc 1 30 0
+  50 0012 0021     		movs	r1, #0
+  51 0014 0320     		movs	r0, #3
+  52 0016 FFF7FEFF 		bl	EZI2C_EzI2CSetBuffer1
+  53              	.LVL1:
+  31:main.c        ****     
+  32:main.c        ****     EZI2C_Start();
+  54              		.loc 1 32 0
+  55 001a FFF7FEFF 		bl	EZI2C_Start
+  56              	.LVL2:
+  33:main.c        ****     
+  34:main.c        ****     CyGlobalIntEnable;
+  57              		.loc 1 34 0
+  58              		.syntax divided
+  59              	@ 34 "main.c" 1
+  60 001e 62B6     		CPSIE   i
+  61              	@ 0 "" 2
+  35:main.c        ****     
+  36:main.c        ****     ADC_SAR_Seq_1_Start(); /* Initialize ADC */
+  62              		.loc 1 36 0
+  63              		.thumb
+  64              		.syntax unified
+  65 0020 FFF7FEFF 		bl	ADC_SAR_Seq_1_Start
+  66              	.LVL3:
+  37:main.c        ****     ADC_SAR_Seq_1_IRQ_Enable(); /* Enable ADC interrupts */
+  67              		.loc 1 37 0
+  68 0024 FFF7FEFF 		bl	ADC_SAR_Seq_1_IRQ_Enable
+  69              	.LVL4:
+  38:main.c        ****     ADC_SAR_Seq_1_StartConvert(); /* Start ADC conversions */
+  70              		.loc 1 38 0
+  71 0028 FFF7FEFF 		bl	ADC_SAR_Seq_1_StartConvert
+  72              	.LVL5:
+  73              	.L2:
+  39:main.c        ****     
+  40:main.c        ****     for(;;)
+  41:main.c        ****     {
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 3
+
+
+  42:main.c        ****         /* Place your application code here. */
+  43:main.c        ****         i2cbuf[0] = result = ADC_SAR_Seq_1_GetResult16(0);
+  74              		.loc 1 43 0 discriminator 1
+  75 002c 0020     		movs	r0, #0
+  76 002e FFF7FEFF 		bl	ADC_SAR_Seq_1_GetResult16
+  77              	.LVL6:
+  78 0032 01AC     		add	r4, sp, #4
+  79 0034 2070     		strb	r0, [r4]
+  44:main.c        ****         i2cbuf[1] = result = ADC_SAR_Seq_1_GetResult16(1);
+  80              		.loc 1 44 0 discriminator 1
+  81 0036 0120     		movs	r0, #1
+  82              	.LVL7:
+  83 0038 FFF7FEFF 		bl	ADC_SAR_Seq_1_GetResult16
+  84              	.LVL8:
+  85 003c 6070     		strb	r0, [r4, #1]
+  45:main.c        ****         i2cbuf[2] = result = ADC_SAR_Seq_1_GetResult16(2);
+  86              		.loc 1 45 0 discriminator 1
+  87 003e 0220     		movs	r0, #2
+  88              	.LVL9:
+  89 0040 FFF7FEFF 		bl	ADC_SAR_Seq_1_GetResult16
+  90              	.LVL10:
+  91 0044 A070     		strb	r0, [r4, #2]
+  92 0046 F1E7     		b	.L2
+  93              		.cfi_endproc
+  94              	.LFE34:
+  95              		.size	main, .-main
+  96              		.text
+  97              	.Letext0:
+  98              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+  99              		.file 3 "Generated_Source\\PSoC4/EZI2C_EZI2C.h"
+ 100              		.file 4 "Generated_Source\\PSoC4/EZI2C.h"
+ 101              		.file 5 "Generated_Source\\PSoC4/ADC_SAR_Seq_1.h"
+ 102              		.file 6 "Generated_Source\\PSoC4/ADC_SAR_Seq_1_IRQ.h"
+ 103              		.section	.debug_info,"",%progbits
+ 104              	.Ldebug_info0:
+ 105 0000 A3010000 		.4byte	0x1a3
+ 106 0004 0400     		.2byte	0x4
+ 107 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 108 000a 04       		.byte	0x4
+ 109 000b 01       		.uleb128 0x1
+ 110 000c 19010000 		.4byte	.LASF24
+ 111 0010 0C       		.byte	0xc
+ 112 0011 42000000 		.4byte	.LASF25
+ 113 0015 9D000000 		.4byte	.LASF26
+ 114 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 115 001d 00000000 		.4byte	0
+ 116 0021 00000000 		.4byte	.Ldebug_line0
+ 117 0025 02       		.uleb128 0x2
+ 118 0026 01       		.byte	0x1
+ 119 0027 06       		.byte	0x6
+ 120 0028 BA010000 		.4byte	.LASF0
+ 121 002c 02       		.uleb128 0x2
+ 122 002d 01       		.byte	0x1
+ 123 002e 08       		.byte	0x8
+ 124 002f C8000000 		.4byte	.LASF1
+ 125 0033 02       		.uleb128 0x2
+ 126 0034 02       		.byte	0x2
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 4
+
+
+ 127 0035 05       		.byte	0x5
+ 128 0036 D8010000 		.4byte	.LASF2
+ 129 003a 02       		.uleb128 0x2
+ 130 003b 02       		.byte	0x2
+ 131 003c 07       		.byte	0x7
+ 132 003d A7010000 		.4byte	.LASF3
+ 133 0041 02       		.uleb128 0x2
+ 134 0042 04       		.byte	0x4
+ 135 0043 05       		.byte	0x5
+ 136 0044 E2000000 		.4byte	.LASF4
+ 137 0048 02       		.uleb128 0x2
+ 138 0049 04       		.byte	0x4
+ 139 004a 07       		.byte	0x7
+ 140 004b 54000000 		.4byte	.LASF5
+ 141 004f 02       		.uleb128 0x2
+ 142 0050 08       		.byte	0x8
+ 143 0051 05       		.byte	0x5
+ 144 0052 00000000 		.4byte	.LASF6
+ 145 0056 02       		.uleb128 0x2
+ 146 0057 08       		.byte	0x8
+ 147 0058 07       		.byte	0x7
+ 148 0059 80000000 		.4byte	.LASF7
+ 149 005d 03       		.uleb128 0x3
+ 150 005e 04       		.byte	0x4
+ 151 005f 05       		.byte	0x5
+ 152 0060 696E7400 		.ascii	"int\000"
+ 153 0064 02       		.uleb128 0x2
+ 154 0065 04       		.byte	0x4
+ 155 0066 07       		.byte	0x7
+ 156 0067 E2010000 		.4byte	.LASF8
+ 157 006b 04       		.uleb128 0x4
+ 158 006c 4E000000 		.4byte	.LASF9
+ 159 0070 02       		.byte	0x2
+ 160 0071 E401     		.2byte	0x1e4
+ 161 0073 2C000000 		.4byte	0x2c
+ 162 0077 04       		.uleb128 0x4
+ 163 0078 D2010000 		.4byte	.LASF10
+ 164 007c 02       		.byte	0x2
+ 165 007d E801     		.2byte	0x1e8
+ 166 007f 33000000 		.4byte	0x33
+ 167 0083 02       		.uleb128 0x2
+ 168 0084 04       		.byte	0x4
+ 169 0085 04       		.byte	0x4
+ 170 0086 97000000 		.4byte	.LASF11
+ 171 008a 02       		.uleb128 0x2
+ 172 008b 08       		.byte	0x8
+ 173 008c 04       		.byte	0x4
+ 174 008d 0B010000 		.4byte	.LASF12
+ 175 0091 02       		.uleb128 0x2
+ 176 0092 01       		.byte	0x1
+ 177 0093 08       		.byte	0x8
+ 178 0094 D6000000 		.4byte	.LASF13
+ 179 0098 02       		.uleb128 0x2
+ 180 0099 08       		.byte	0x8
+ 181 009a 04       		.byte	0x4
+ 182 009b C6010000 		.4byte	.LASF14
+ 183 009f 02       		.uleb128 0x2
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 5
+
+
+ 184 00a0 04       		.byte	0x4
+ 185 00a1 07       		.byte	0x7
+ 186 00a2 05020000 		.4byte	.LASF15
+ 187 00a6 05       		.uleb128 0x5
+ 188 00a7 49000000 		.4byte	.LASF27
+ 189 00ab 01       		.byte	0x1
+ 190 00ac 0E       		.byte	0xe
+ 191 00ad 5D000000 		.4byte	0x5d
+ 192 00b1 00000000 		.4byte	.LFB34
+ 193 00b5 48000000 		.4byte	.LFE34-.LFB34
+ 194 00b9 01       		.uleb128 0x1
+ 195 00ba 9C       		.byte	0x9c
+ 196 00bb 54010000 		.4byte	0x154
+ 197 00bf 06       		.uleb128 0x6
+ 198 00c0 12010000 		.4byte	.LASF16
+ 199 00c4 01       		.byte	0x1
+ 200 00c5 11       		.byte	0x11
+ 201 00c6 54010000 		.4byte	0x154
+ 202 00ca 02       		.uleb128 0x2
+ 203 00cb 91       		.byte	0x91
+ 204 00cc 74       		.sleb128 -12
+ 205 00cd 07       		.uleb128 0x7
+ 206 00ce DB000000 		.4byte	.LASF17
+ 207 00d2 01       		.byte	0x1
+ 208 00d3 16       		.byte	0x16
+ 209 00d4 77000000 		.4byte	0x77
+ 210 00d8 00000000 		.4byte	.LLST0
+ 211 00dc 08       		.uleb128 0x8
+ 212 00dd 1A000000 		.4byte	.LVL1
+ 213 00e1 64010000 		.4byte	0x164
+ 214 00e5 FA000000 		.4byte	0xfa
+ 215 00e9 09       		.uleb128 0x9
+ 216 00ea 01       		.uleb128 0x1
+ 217 00eb 50       		.byte	0x50
+ 218 00ec 01       		.uleb128 0x1
+ 219 00ed 33       		.byte	0x33
+ 220 00ee 09       		.uleb128 0x9
+ 221 00ef 01       		.uleb128 0x1
+ 222 00f0 51       		.byte	0x51
+ 223 00f1 01       		.uleb128 0x1
+ 224 00f2 30       		.byte	0x30
+ 225 00f3 09       		.uleb128 0x9
+ 226 00f4 01       		.uleb128 0x1
+ 227 00f5 52       		.byte	0x52
+ 228 00f6 02       		.uleb128 0x2
+ 229 00f7 91       		.byte	0x91
+ 230 00f8 74       		.sleb128 -12
+ 231 00f9 00       		.byte	0
+ 232 00fa 0A       		.uleb128 0xa
+ 233 00fb 1E000000 		.4byte	.LVL2
+ 234 00ff 6F010000 		.4byte	0x16f
+ 235 0103 0A       		.uleb128 0xa
+ 236 0104 24000000 		.4byte	.LVL3
+ 237 0108 7A010000 		.4byte	0x17a
+ 238 010c 0A       		.uleb128 0xa
+ 239 010d 28000000 		.4byte	.LVL4
+ 240 0111 85010000 		.4byte	0x185
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 6
+
+
+ 241 0115 0A       		.uleb128 0xa
+ 242 0116 2C000000 		.4byte	.LVL5
+ 243 011a 90010000 		.4byte	0x190
+ 244 011e 08       		.uleb128 0x8
+ 245 011f 32000000 		.4byte	.LVL6
+ 246 0123 9B010000 		.4byte	0x19b
+ 247 0127 31010000 		.4byte	0x131
+ 248 012b 09       		.uleb128 0x9
+ 249 012c 01       		.uleb128 0x1
+ 250 012d 50       		.byte	0x50
+ 251 012e 01       		.uleb128 0x1
+ 252 012f 30       		.byte	0x30
+ 253 0130 00       		.byte	0
+ 254 0131 08       		.uleb128 0x8
+ 255 0132 3C000000 		.4byte	.LVL8
+ 256 0136 9B010000 		.4byte	0x19b
+ 257 013a 44010000 		.4byte	0x144
+ 258 013e 09       		.uleb128 0x9
+ 259 013f 01       		.uleb128 0x1
+ 260 0140 50       		.byte	0x50
+ 261 0141 01       		.uleb128 0x1
+ 262 0142 31       		.byte	0x31
+ 263 0143 00       		.byte	0
+ 264 0144 0B       		.uleb128 0xb
+ 265 0145 44000000 		.4byte	.LVL10
+ 266 0149 9B010000 		.4byte	0x19b
+ 267 014d 09       		.uleb128 0x9
+ 268 014e 01       		.uleb128 0x1
+ 269 014f 50       		.byte	0x50
+ 270 0150 01       		.uleb128 0x1
+ 271 0151 32       		.byte	0x32
+ 272 0152 00       		.byte	0
+ 273 0153 00       		.byte	0
+ 274 0154 0C       		.uleb128 0xc
+ 275 0155 6B000000 		.4byte	0x6b
+ 276 0159 64010000 		.4byte	0x164
+ 277 015d 0D       		.uleb128 0xd
+ 278 015e 9F000000 		.4byte	0x9f
+ 279 0162 02       		.byte	0x2
+ 280 0163 00       		.byte	0
+ 281 0164 0E       		.uleb128 0xe
+ 282 0165 EF010000 		.4byte	.LASF18
+ 283 0169 EF010000 		.4byte	.LASF18
+ 284 016d 03       		.byte	0x3
+ 285 016e A2       		.byte	0xa2
+ 286 016f 0E       		.uleb128 0xe
+ 287 0170 EB000000 		.4byte	.LASF19
+ 288 0174 EB000000 		.4byte	.LASF19
+ 289 0178 04       		.byte	0x4
+ 290 0179 72       		.byte	0x72
+ 291 017a 0E       		.uleb128 0xe
+ 292 017b F7000000 		.4byte	.LASF20
+ 293 017f F7000000 		.4byte	.LASF20
+ 294 0183 05       		.byte	0x5
+ 295 0184 99       		.byte	0x99
+ 296 0185 0E       		.uleb128 0xe
+ 297 0186 29000000 		.4byte	.LASF21
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 7
+
+
+ 298 018a 29000000 		.4byte	.LASF21
+ 299 018e 06       		.byte	0x6
+ 300 018f 23       		.byte	0x23
+ 301 0190 0E       		.uleb128 0xe
+ 302 0191 0E000000 		.4byte	.LASF22
+ 303 0195 0E000000 		.4byte	.LASF22
+ 304 0199 05       		.byte	0x5
+ 305 019a 9D       		.byte	0x9d
+ 306 019b 0E       		.uleb128 0xe
+ 307 019c 66000000 		.4byte	.LASF23
+ 308 01a0 66000000 		.4byte	.LASF23
+ 309 01a4 05       		.byte	0x5
+ 310 01a5 A0       		.byte	0xa0
+ 311 01a6 00       		.byte	0
+ 312              		.section	.debug_abbrev,"",%progbits
+ 313              	.Ldebug_abbrev0:
+ 314 0000 01       		.uleb128 0x1
+ 315 0001 11       		.uleb128 0x11
+ 316 0002 01       		.byte	0x1
+ 317 0003 25       		.uleb128 0x25
+ 318 0004 0E       		.uleb128 0xe
+ 319 0005 13       		.uleb128 0x13
+ 320 0006 0B       		.uleb128 0xb
+ 321 0007 03       		.uleb128 0x3
+ 322 0008 0E       		.uleb128 0xe
+ 323 0009 1B       		.uleb128 0x1b
+ 324 000a 0E       		.uleb128 0xe
+ 325 000b 55       		.uleb128 0x55
+ 326 000c 17       		.uleb128 0x17
+ 327 000d 11       		.uleb128 0x11
+ 328 000e 01       		.uleb128 0x1
+ 329 000f 10       		.uleb128 0x10
+ 330 0010 17       		.uleb128 0x17
+ 331 0011 00       		.byte	0
+ 332 0012 00       		.byte	0
+ 333 0013 02       		.uleb128 0x2
+ 334 0014 24       		.uleb128 0x24
+ 335 0015 00       		.byte	0
+ 336 0016 0B       		.uleb128 0xb
+ 337 0017 0B       		.uleb128 0xb
+ 338 0018 3E       		.uleb128 0x3e
+ 339 0019 0B       		.uleb128 0xb
+ 340 001a 03       		.uleb128 0x3
+ 341 001b 0E       		.uleb128 0xe
+ 342 001c 00       		.byte	0
+ 343 001d 00       		.byte	0
+ 344 001e 03       		.uleb128 0x3
+ 345 001f 24       		.uleb128 0x24
+ 346 0020 00       		.byte	0
+ 347 0021 0B       		.uleb128 0xb
+ 348 0022 0B       		.uleb128 0xb
+ 349 0023 3E       		.uleb128 0x3e
+ 350 0024 0B       		.uleb128 0xb
+ 351 0025 03       		.uleb128 0x3
+ 352 0026 08       		.uleb128 0x8
+ 353 0027 00       		.byte	0
+ 354 0028 00       		.byte	0
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 8
+
+
+ 355 0029 04       		.uleb128 0x4
+ 356 002a 16       		.uleb128 0x16
+ 357 002b 00       		.byte	0
+ 358 002c 03       		.uleb128 0x3
+ 359 002d 0E       		.uleb128 0xe
+ 360 002e 3A       		.uleb128 0x3a
+ 361 002f 0B       		.uleb128 0xb
+ 362 0030 3B       		.uleb128 0x3b
+ 363 0031 05       		.uleb128 0x5
+ 364 0032 49       		.uleb128 0x49
+ 365 0033 13       		.uleb128 0x13
+ 366 0034 00       		.byte	0
+ 367 0035 00       		.byte	0
+ 368 0036 05       		.uleb128 0x5
+ 369 0037 2E       		.uleb128 0x2e
+ 370 0038 01       		.byte	0x1
+ 371 0039 3F       		.uleb128 0x3f
+ 372 003a 19       		.uleb128 0x19
+ 373 003b 03       		.uleb128 0x3
+ 374 003c 0E       		.uleb128 0xe
+ 375 003d 3A       		.uleb128 0x3a
+ 376 003e 0B       		.uleb128 0xb
+ 377 003f 3B       		.uleb128 0x3b
+ 378 0040 0B       		.uleb128 0xb
+ 379 0041 27       		.uleb128 0x27
+ 380 0042 19       		.uleb128 0x19
+ 381 0043 49       		.uleb128 0x49
+ 382 0044 13       		.uleb128 0x13
+ 383 0045 8701     		.uleb128 0x87
+ 384 0047 19       		.uleb128 0x19
+ 385 0048 11       		.uleb128 0x11
+ 386 0049 01       		.uleb128 0x1
+ 387 004a 12       		.uleb128 0x12
+ 388 004b 06       		.uleb128 0x6
+ 389 004c 40       		.uleb128 0x40
+ 390 004d 18       		.uleb128 0x18
+ 391 004e 9742     		.uleb128 0x2117
+ 392 0050 19       		.uleb128 0x19
+ 393 0051 01       		.uleb128 0x1
+ 394 0052 13       		.uleb128 0x13
+ 395 0053 00       		.byte	0
+ 396 0054 00       		.byte	0
+ 397 0055 06       		.uleb128 0x6
+ 398 0056 34       		.uleb128 0x34
+ 399 0057 00       		.byte	0
+ 400 0058 03       		.uleb128 0x3
+ 401 0059 0E       		.uleb128 0xe
+ 402 005a 3A       		.uleb128 0x3a
+ 403 005b 0B       		.uleb128 0xb
+ 404 005c 3B       		.uleb128 0x3b
+ 405 005d 0B       		.uleb128 0xb
+ 406 005e 49       		.uleb128 0x49
+ 407 005f 13       		.uleb128 0x13
+ 408 0060 02       		.uleb128 0x2
+ 409 0061 18       		.uleb128 0x18
+ 410 0062 00       		.byte	0
+ 411 0063 00       		.byte	0
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 9
+
+
+ 412 0064 07       		.uleb128 0x7
+ 413 0065 34       		.uleb128 0x34
+ 414 0066 00       		.byte	0
+ 415 0067 03       		.uleb128 0x3
+ 416 0068 0E       		.uleb128 0xe
+ 417 0069 3A       		.uleb128 0x3a
+ 418 006a 0B       		.uleb128 0xb
+ 419 006b 3B       		.uleb128 0x3b
+ 420 006c 0B       		.uleb128 0xb
+ 421 006d 49       		.uleb128 0x49
+ 422 006e 13       		.uleb128 0x13
+ 423 006f 02       		.uleb128 0x2
+ 424 0070 17       		.uleb128 0x17
+ 425 0071 00       		.byte	0
+ 426 0072 00       		.byte	0
+ 427 0073 08       		.uleb128 0x8
+ 428 0074 898201   		.uleb128 0x4109
+ 429 0077 01       		.byte	0x1
+ 430 0078 11       		.uleb128 0x11
+ 431 0079 01       		.uleb128 0x1
+ 432 007a 31       		.uleb128 0x31
+ 433 007b 13       		.uleb128 0x13
+ 434 007c 01       		.uleb128 0x1
+ 435 007d 13       		.uleb128 0x13
+ 436 007e 00       		.byte	0
+ 437 007f 00       		.byte	0
+ 438 0080 09       		.uleb128 0x9
+ 439 0081 8A8201   		.uleb128 0x410a
+ 440 0084 00       		.byte	0
+ 441 0085 02       		.uleb128 0x2
+ 442 0086 18       		.uleb128 0x18
+ 443 0087 9142     		.uleb128 0x2111
+ 444 0089 18       		.uleb128 0x18
+ 445 008a 00       		.byte	0
+ 446 008b 00       		.byte	0
+ 447 008c 0A       		.uleb128 0xa
+ 448 008d 898201   		.uleb128 0x4109
+ 449 0090 00       		.byte	0
+ 450 0091 11       		.uleb128 0x11
+ 451 0092 01       		.uleb128 0x1
+ 452 0093 31       		.uleb128 0x31
+ 453 0094 13       		.uleb128 0x13
+ 454 0095 00       		.byte	0
+ 455 0096 00       		.byte	0
+ 456 0097 0B       		.uleb128 0xb
+ 457 0098 898201   		.uleb128 0x4109
+ 458 009b 01       		.byte	0x1
+ 459 009c 11       		.uleb128 0x11
+ 460 009d 01       		.uleb128 0x1
+ 461 009e 31       		.uleb128 0x31
+ 462 009f 13       		.uleb128 0x13
+ 463 00a0 00       		.byte	0
+ 464 00a1 00       		.byte	0
+ 465 00a2 0C       		.uleb128 0xc
+ 466 00a3 01       		.uleb128 0x1
+ 467 00a4 01       		.byte	0x1
+ 468 00a5 49       		.uleb128 0x49
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 10
+
+
+ 469 00a6 13       		.uleb128 0x13
+ 470 00a7 01       		.uleb128 0x1
+ 471 00a8 13       		.uleb128 0x13
+ 472 00a9 00       		.byte	0
+ 473 00aa 00       		.byte	0
+ 474 00ab 0D       		.uleb128 0xd
+ 475 00ac 21       		.uleb128 0x21
+ 476 00ad 00       		.byte	0
+ 477 00ae 49       		.uleb128 0x49
+ 478 00af 13       		.uleb128 0x13
+ 479 00b0 2F       		.uleb128 0x2f
+ 480 00b1 0B       		.uleb128 0xb
+ 481 00b2 00       		.byte	0
+ 482 00b3 00       		.byte	0
+ 483 00b4 0E       		.uleb128 0xe
+ 484 00b5 2E       		.uleb128 0x2e
+ 485 00b6 00       		.byte	0
+ 486 00b7 3F       		.uleb128 0x3f
+ 487 00b8 19       		.uleb128 0x19
+ 488 00b9 3C       		.uleb128 0x3c
+ 489 00ba 19       		.uleb128 0x19
+ 490 00bb 6E       		.uleb128 0x6e
+ 491 00bc 0E       		.uleb128 0xe
+ 492 00bd 03       		.uleb128 0x3
+ 493 00be 0E       		.uleb128 0xe
+ 494 00bf 3A       		.uleb128 0x3a
+ 495 00c0 0B       		.uleb128 0xb
+ 496 00c1 3B       		.uleb128 0x3b
+ 497 00c2 0B       		.uleb128 0xb
+ 498 00c3 00       		.byte	0
+ 499 00c4 00       		.byte	0
+ 500 00c5 00       		.byte	0
+ 501              		.section	.debug_loc,"",%progbits
+ 502              	.Ldebug_loc0:
+ 503              	.LLST0:
+ 504 0000 12000000 		.4byte	.LVL0
+ 505 0004 2C000000 		.4byte	.LVL5
+ 506 0008 0200     		.2byte	0x2
+ 507 000a 30       		.byte	0x30
+ 508 000b 9F       		.byte	0x9f
+ 509 000c 32000000 		.4byte	.LVL6
+ 510 0010 38000000 		.4byte	.LVL7
+ 511 0014 0100     		.2byte	0x1
+ 512 0016 50       		.byte	0x50
+ 513 0017 3C000000 		.4byte	.LVL8
+ 514 001b 40000000 		.4byte	.LVL9
+ 515 001f 0100     		.2byte	0x1
+ 516 0021 50       		.byte	0x50
+ 517 0022 44000000 		.4byte	.LVL10
+ 518 0026 48000000 		.4byte	.LFE34
+ 519 002a 0100     		.2byte	0x1
+ 520 002c 50       		.byte	0x50
+ 521 002d 00000000 		.4byte	0
+ 522 0031 00000000 		.4byte	0
+ 523              		.section	.debug_aranges,"",%progbits
+ 524 0000 1C000000 		.4byte	0x1c
+ 525 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 11
+
+
+ 526 0006 00000000 		.4byte	.Ldebug_info0
+ 527 000a 04       		.byte	0x4
+ 528 000b 00       		.byte	0
+ 529 000c 0000     		.2byte	0
+ 530 000e 0000     		.2byte	0
+ 531 0010 00000000 		.4byte	.LFB34
+ 532 0014 48000000 		.4byte	.LFE34-.LFB34
+ 533 0018 00000000 		.4byte	0
+ 534 001c 00000000 		.4byte	0
+ 535              		.section	.debug_ranges,"",%progbits
+ 536              	.Ldebug_ranges0:
+ 537 0000 00000000 		.4byte	.LFB34
+ 538 0004 48000000 		.4byte	.LFE34
+ 539 0008 00000000 		.4byte	0
+ 540 000c 00000000 		.4byte	0
+ 541              		.section	.debug_line,"",%progbits
+ 542              	.Ldebug_line0:
+ 543 0000 B6000000 		.section	.debug_str,"MS",%progbits,1
+ 543      02008700 
+ 543      00000201 
+ 543      FB0E0D00 
+ 543      01010101 
+ 544              	.LASF6:
+ 545 0000 6C6F6E67 		.ascii	"long long int\000"
+ 545      206C6F6E 
+ 545      6720696E 
+ 545      7400
+ 546              	.LASF22:
+ 547 000e 4144435F 		.ascii	"ADC_SAR_Seq_1_StartConvert\000"
+ 547      5341525F 
+ 547      5365715F 
+ 547      315F5374 
+ 547      61727443 
+ 548              	.LASF21:
+ 549 0029 4144435F 		.ascii	"ADC_SAR_Seq_1_IRQ_Enable\000"
+ 549      5341525F 
+ 549      5365715F 
+ 549      315F4952 
+ 549      515F456E 
+ 550              	.LASF25:
+ 551 0042 6D61696E 		.ascii	"main.c\000"
+ 551      2E6300
+ 552              	.LASF27:
+ 553 0049 6D61696E 		.ascii	"main\000"
+ 553      00
+ 554              	.LASF9:
+ 555 004e 75696E74 		.ascii	"uint8\000"
+ 555      3800
+ 556              	.LASF5:
+ 557 0054 6C6F6E67 		.ascii	"long unsigned int\000"
+ 557      20756E73 
+ 557      69676E65 
+ 557      6420696E 
+ 557      7400
+ 558              	.LASF23:
+ 559 0066 4144435F 		.ascii	"ADC_SAR_Seq_1_GetResult16\000"
+ 559      5341525F 
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 12
+
+
+ 559      5365715F 
+ 559      315F4765 
+ 559      74526573 
+ 560              	.LASF7:
+ 561 0080 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 561      206C6F6E 
+ 561      6720756E 
+ 561      7369676E 
+ 561      65642069 
+ 562              	.LASF11:
+ 563 0097 666C6F61 		.ascii	"float\000"
+ 563      7400
+ 564              	.LASF26:
+ 565 009d 433A5C55 		.ascii	"C:\\Users\\michi\\Desktop\\I2C\\I2C slave.cydsn\000"
+ 565      73657273 
+ 565      5C6D6963 
+ 565      68695C44 
+ 565      65736B74 
+ 566              	.LASF1:
+ 567 00c8 756E7369 		.ascii	"unsigned char\000"
+ 567      676E6564 
+ 567      20636861 
+ 567      7200
+ 568              	.LASF13:
+ 569 00d6 63686172 		.ascii	"char\000"
+ 569      00
+ 570              	.LASF17:
+ 571 00db 72657375 		.ascii	"result\000"
+ 571      6C7400
+ 572              	.LASF4:
+ 573 00e2 6C6F6E67 		.ascii	"long int\000"
+ 573      20696E74 
+ 573      00
+ 574              	.LASF19:
+ 575 00eb 455A4932 		.ascii	"EZI2C_Start\000"
+ 575      435F5374 
+ 575      61727400 
+ 576              	.LASF20:
+ 577 00f7 4144435F 		.ascii	"ADC_SAR_Seq_1_Start\000"
+ 577      5341525F 
+ 577      5365715F 
+ 577      315F5374 
+ 577      61727400 
+ 578              	.LASF12:
+ 579 010b 646F7562 		.ascii	"double\000"
+ 579      6C6500
+ 580              	.LASF16:
+ 581 0112 69326362 		.ascii	"i2cbuf\000"
+ 581      756600
+ 582              	.LASF24:
+ 583 0119 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 583      43313120 
+ 583      352E342E 
+ 583      31203230 
+ 583      31363036 
+ 584 014c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 584      20726576 
+ARM GAS  C:\Users\michi\AppData\Local\Temp\ccmdM3bq.s 			page 13
+
+
+ 584      6973696F 
+ 584      6E203233 
+ 584      37373135 
+ 585 017f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 585      66756E63 
+ 585      74696F6E 
+ 585      2D736563 
+ 585      74696F6E 
+ 586              	.LASF3:
+ 587 01a7 73686F72 		.ascii	"short unsigned int\000"
+ 587      7420756E 
+ 587      7369676E 
+ 587      65642069 
+ 587      6E7400
+ 588              	.LASF0:
+ 589 01ba 7369676E 		.ascii	"signed char\000"
+ 589      65642063 
+ 589      68617200 
+ 590              	.LASF14:
+ 591 01c6 6C6F6E67 		.ascii	"long double\000"
+ 591      20646F75 
+ 591      626C6500 
+ 592              	.LASF10:
+ 593 01d2 696E7431 		.ascii	"int16\000"
+ 593      3600
+ 594              	.LASF2:
+ 595 01d8 73686F72 		.ascii	"short int\000"
+ 595      7420696E 
+ 595      7400
+ 596              	.LASF8:
+ 597 01e2 756E7369 		.ascii	"unsigned int\000"
+ 597      676E6564 
+ 597      20696E74 
+ 597      00
+ 598              	.LASF18:
+ 599 01ef 455A4932 		.ascii	"EZI2C_EzI2CSetBuffer1\000"
+ 599      435F457A 
+ 599      49324353 
+ 599      65744275 
+ 599      66666572 
+ 600              	.LASF15:
+ 601 0205 73697A65 		.ascii	"sizetype\000"
+ 601      74797065 
+ 601      00
+ 602              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
