@@ -43,7 +43,9 @@ loop(Ref) ->
 
         Else ->
             io:format("else ~p~n", [Else]),
-            ok
+            up
+
+            
     end.
 
 get() ->

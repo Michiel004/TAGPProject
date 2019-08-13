@@ -206,18 +206,19 @@ loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Num
 		{led,on} -> 
 			powerDissipationInst:switch_on(PidLed), 
 			powerDissipationInst:set_resistance(PidLed,396),
-			{ontvanger,'pi@192.168.0.108'} ! {led, numer, on},
+			{ontvanger,'pi@192.168.0.108'} ! {led, Number, on},
 			ledstatusDT:updateStatus({led ,Number,status},on),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
 		{ledResistance, Value} -> 
 			powerDissipationInst:set_resistance(PidLed,Value),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
 		{resresistance, Value} -> 
-			powerDissipationInst:set_resistance(res,Value),
+			powerDissipationInst:set_resistance(PIRes,Value),
+			ledstatusDT:updateStatus({Number,resResistor},Value),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
 		{led,off} -> 
 			powerDissipationInst:switch_off(PidLed), 
-			{ontvanger,'pi@192.168.0.108'} ! {led, numer, off},
+			{ontvanger,'pi@192.168.0.108'} ! {led, Number, off},
 			ledstatusDT:updateStatus({led ,Number,status},off),
 			powerDissipationInst:set_resistance(PidLed,9999999999999),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);

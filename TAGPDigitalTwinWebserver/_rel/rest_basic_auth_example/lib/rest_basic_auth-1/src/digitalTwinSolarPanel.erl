@@ -217,7 +217,7 @@ loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Num
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
 		{led,off} -> 
 			powerDissipationInst:switch_off(PidLed), 
-			%[ {ontvanger,'pi@192.168.0.108'} ! {led, numer, off}],
+			{ontvanger,'pi@192.168.0.108'} ! {led, Number, off},
 			solarPanelStatus:updateStatus({led ,Number,status},off),
 			powerDissipationInst:set_resistance(PidLed,9999999999999),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
@@ -236,7 +236,7 @@ loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Num
 			powerSourceInst:set_voltige(source), 
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
 		{total, current} -> 
-			%{ontvanger,'pi@192.168.0.108'} ! {zp, Number, isCurrent,self()},
+			{ontvanger,'pi@192.168.0.108'} ! {zp, Number, isCurrent,self()},
 			%{_, Res} = currentMeterInst:estimate_flow(PIampMeter),
 		    %{_, Voltige} = powerSourceInst:get_voltige(PIsource),
 		    %Respons = Voltige / Res,
@@ -244,13 +244,13 @@ loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Num
 			%solarPanelStatus:setStatus({Number,rwTotalCurrent},Respons),
 			solarPanelStatus:updateStatus({Number,totalCurrent},Respons),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
-		{antwoord, led, Number, isCurrent,AdcValue} ->
-			{_, Voltige} = powerSourceInst:get_voltige(PIsource),
-			VoltigeAdc = AdcValue*Voltige/255,
-			{_, Res} = powerDissipationInst:get_resistance(PIRes),
-			Current = VoltigeAdc / Res,
-			io:fwrite("current ~p~n", [Current]),
-			solarPanelStatus:updateStatus({Number,rwTotalCurrent},Current),
+		{antwoord, zp, Number, isCurrent,AdcValue} ->
+			%{_, Voltige} = powerSourceInst:get_voltige(PIsource),
+			%VoltigeAdc = AdcValue*Voltige/255,
+			%{_, Res} = powerDissipationInst:get_resistance(PIRes),
+			%Current = VoltigeAdc / Res,
+			io:fwrite("current ~p~n", [AdcValue]),
+			solarPanelStatus:updateStatus({Number,rwTotalCurrent},AdcValue),
 			loop(AggrInst_Pid, FluidumInst_Pid,PidLed,PIampMeter,PIsource,PIw1,PIW2,PIW3,Number,PIRes);
 		stop -> ok
 	end. 	

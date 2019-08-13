@@ -20,6 +20,10 @@ start(_Type, _Args) ->
 			{"/ledStatusOff", ledStatusOff, []},
 			{"/dtStatus", dtStatus, []},
 			{"/supervisorStatus", getSupervisorStatus, []},
+			{"/ledRedOn", ledRedOn, []},
+			{"/ledRedOff", ledRedOff, []},
+			{"/ledBlueOn", ledBlueOn, []},
+			{"/ledBlueOff", ledBlueOff, []},
 			{"/", toppage_h, []}
 		]}
 	]),
